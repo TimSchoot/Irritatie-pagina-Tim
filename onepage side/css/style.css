@@ -1,0 +1,238 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0%;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#spinningPicture {
+    position: absolute;
+    width: 8vw;
+    top: 440px;
+    left: 130px;
+  }
+.grid-container {
+    display: grid;
+    grid-template-columns: 10vw 10vw 10vw 20vw 50vw;
+    grid-template-rows: 20vh 60vh 20vh;
+}
+
+.grid-item {
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+}
+
+.item1, .item3, .item4 {
+    text-align: left;
+    grid-column: 1 / span 4;
+}
+
+.item2 {
+    grid-column: 5;
+    grid-row: 1 / span 3;
+    background-color: #c52146;
+}
+
+.item1 {
+    grid-row: 1;
+}
+
+.item3 {
+    grid-row: 2;
+    margin-left: 12%;
+    margin-right: 5vw;
+}
+
+.item4 {
+    grid-row: 3;
+}
+
+#foto-iphone {
+    width: 50%;
+    height: auto;
+}
+
+#logo {
+    width: 3vw;
+    height: auto;
+}
+
+#knop {
+    width: 8vw;
+    position: absolute;
+    top: 440px;
+    left: 130px;
+}
+#knop2 {
+    width: 8vw;
+    position: absolute;
+    top: 440px;
+    left: 300px;
+}
+#knop2:hover{
+    left: 800px;
+    top: 700x;
+}
+
+h1 {
+    font-size: 2.5vw;
+}
+
+#p1 {
+    font-size: 1.5vw;
+}
+
+#p2 {
+    font-size: 1vw;
+    color: grey;
+}
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+#popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+#videoroll {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.textkleur{
+    animation: textkleur 0.7s infinite;
+}
+#movingPicture {
+    position: absolute;
+  }
+
+.textsize{
+    animation: textsize 0.3s infinite;
+}
+#logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: circle 0.5s infinite linear;
+
+ }
+
+ @keyframes circle {
+
+     0% {
+      transform: rotate(0deg) translate(100px) rotate(0deg);
+    } 
+    25% {
+      transform: rotate(90deg) translate(100px) rotate(-90deg);
+    }
+    50% {
+      transform: rotate(180deg) translate(100px) rotate(-180deg);
+    }
+    75% {
+      transform: rotate(270deg) translate(100px) rotate(-270deg);
+    }
+     100% {
+      transform: rotate(360deg) translate(100px) rotate(-360deg);
+    } 
+ }
+@keyframes textkleur{
+    0% {color: whitesmoke;}
+    25% {color: white;}
+    50% {color: yellow;}
+    75% {color: gray;}
+    100% {color: pink;}
+}
+@keyframes textsize{
+    0% {font-size: smaller;}
+    25% {font-size: medium;}
+    50% {font-size: large;}
+    75% {font-size: medium;}
+    100% {font-size: small;}
+}
+@media only screen and (max-width: 430px) {
+    .grid-container {
+        grid-template-columns: 10vw 80vw 10vw;
+        grid-template-rows: 5vh 95vh 30vh 40vh 30vh;
+    }
+
+    #logo {
+        width: 10vw;
+    }
+    #knop{
+        width: 30vw;
+    }
+    .item2{
+        grid-row: 3 / span 5;
+        grid-column: 1 / span 3;
+    }
+    .item4{
+        display: none;
+    }
+    h1 {
+        font-size: 3rem; 
+    }
+    #p1{
+        font-size: 1.6rem;
+    }
+    #p2{
+        font-size: 1rem;
+    }
+    #foto-iphone{
+        grid-column: 2;
+        margin-top: 50%;
+        width: 70%;
+    }
+}
+
+@media only screen and (min-width: 431px) and (max-width: 1200px) {
+    .grid-container {
+        grid-template-columns: 10vw 80vw 10vw;
+        grid-template-rows: 5vh 95vh 100vh;
+    }
+
+    #logo {
+        width: 10vw;
+    }
+    #knop{
+        width: 30vw;
+    }
+    .item2{
+        grid-row: 3 / span 5;
+        grid-column: 1 / span 3;
+    }
+    .item4{
+        display: none;
+    }
+    h1 {
+        font-size: 3rem; 
+    }
+    #p1{
+        font-size: 1.6rem;
+    }
+    #p2{
+        font-size: 1rem;
+    }
+    #foto-iphone{
+        grid-column: 2;
+        margin-top: 20%;
+        width: 50%;
+    }
+}
+
